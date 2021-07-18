@@ -7,9 +7,9 @@ const Header = () => {
 
   return (
     < SectionHeader className='flexbox' >
-      <img src={menu} alt='Botão de menu' />
-      <img src={marvel} alt='Logotipo da marvel em vermelho' />
-      <img src={search} alt='Botão de pesquisa' />
+      <MenuAndSearchBar src={menu} alt='Botão de menu' />
+      <MarvelLogo src={marvel} alt='Logotipo da marvel em vermelho' />
+      <MenuAndSearchBar src={search} alt='Botão de pesquisa' />
     </SectionHeader >
   )
 }
@@ -17,6 +17,19 @@ const Header = () => {
 const SectionHeader = styled.header`
   display: flex;
   justify-content: space-between;
+  height: 64px;
+  box-sizing: border-box;
+  padding: 20px;
+`;
+
+const MarvelLogo = styled.img`
+  width: 71px;
+  height: 26px;
+`;
+
+const MenuAndSearchBar = styled.img`
+  width: 24px;
+  height: 24px;
 `;
 
 export default Header;
