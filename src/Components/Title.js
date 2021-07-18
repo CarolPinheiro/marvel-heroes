@@ -13,13 +13,13 @@ const Title = ({ title, subtitle }) => {
 const SectionTitle = styled.section`
 display: flex;
 flex-direction: column-reverse;
-
-padding: 24px;
+padding: 10px 24px 24px;
 `;
 
 const MainTitle = styled.h1`
 font-family: 'Gilroy Heavy';
 font-size: 2em;
+padding-top: 8px;
 `;
 
 const SubTitle = styled.h2`
