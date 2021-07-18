@@ -1,7 +1,33 @@
 import { createGlobalStyle } from 'styled-components';
+import GilroyHeavy from './assets/fonts/gilroy-heavy.ttf'
+import GilroyBold from './assets/fonts/gilroy-bold.ttf'
+import GilroySemiBold from './assets/fonts/gilroy-semibold.ttf'
+import GilroyRegular from './assets/fonts/gilroy-regular.ttf'
+import GilroyMedium from './assets/fonts/gilroy-medium.ttf'
 
 const GlobalStyle = createGlobalStyle`
-  html, body, div, span, applet, object, iframe,
+@font-face {
+    font-family: 'Gilroy Heavy';
+    src: url('${GilroyHeavy}');
+  }
+@font-face {
+    font-family: 'Gilroy Bold';
+    src: url('${GilroyBold}');
+  }
+@font-face {
+    font-family: 'Gilroy Semibold';
+    src: url('${GilroySemiBold}');
+  }
+@font-face {
+    font-family: 'Gilroy Regular';
+    src: url('${GilroyRegular}')
+  }
+@font-face {
+    font-family: 'Gilroy Medium';
+    src: url('${GilroyMedium}');
+  }
+
+html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
 del, dfn, em, img, ins, kbd, q, s, samp,
@@ -17,8 +43,7 @@ time, mark, audio, video {
 	margin: 0;
 	padding: 0;
 	border: 0;
-	font-size: 100%;
-	font: inherit;
+	/* font-family: "Gilroy Heavy"; */
 	vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -44,6 +69,7 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+
 `;
 
 export default GlobalStyle;
