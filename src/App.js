@@ -1,14 +1,13 @@
-import Header from './Components/Header/Header'
 import GlobalStyle from './globalStyles';
+import MainPage from './Pages/MainPage';
 
 function App() {
   return (
-    <main className="App">
+    <>
       <GlobalStyle />
+      <MainPage />
 
-      <Header />
-
-    </main>
+    </>
   );
 }
 
