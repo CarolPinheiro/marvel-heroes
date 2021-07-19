@@ -1,14 +1,19 @@
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
+import { fetchCharacters } from "../Api";
 import CharactersGrid from "../Components/CharactersGrid";
 import Header from "../Components/Header"
 import HeroesPanelFilter from "../Components/HeroesPanelFilter";
 import Title from "../Components/Title"
 
 const MainPage = () => {
+  const [apiReturn, setApiReturn] = useState({})
 
   useEffect(() => {
-
+    fetchCharacters().then(e => setApiReturn(e.data.results));
   }, []);
+
+
+
 
   return (
     <>
