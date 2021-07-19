@@ -4,15 +4,16 @@ import antihero from '../assets/icons/antihero.svg'
 import alien from '../assets/icons/alien.svg'
 import human from '../assets/icons/human.svg'
 import styled from 'styled-components';
+import filterPanel from '../variables'
 const HeroesPanelFilter = () => {
 
   return (
     <FilterDiv>
-      <HeroFilter src={hero} />
-      <HeroFilter src={villain} />
-      <HeroFilter src={antihero} />
-      <HeroFilter src={alien} />
-      <HeroFilter src={human} />
+      <HeroFilter src={hero} alt="Hero icon" />
+      <HeroFilter src={villain} alt="Villain icon" />
+      <HeroFilter src={antihero} alt="Antihero icon" />
+      <HeroFilter src={alien} alt="Alien icon" />
+      <HeroFilter src={human} alt="Human icon" />
     </FilterDiv>
   );
 }
@@ -23,7 +24,8 @@ height: 56px;
 border-radius: 50%;
 box-sizing: border-box;
 padding: 12px;
-background-image: linear-gradient(180deg, #005BEA 0%, #00C6FB 100%);
+background-image: ${props => filterPanel[props.alt]}
+;
 `;
 
 const FilterDiv = styled.div`
