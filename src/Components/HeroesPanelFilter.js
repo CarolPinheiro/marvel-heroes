@@ -24,8 +24,7 @@ height: 56px;
 border-radius: 50%;
 box-sizing: border-box;
 padding: 12px;
-background-image: ${props => filterPanel[props.alt]}
-;
+background-image: ${props => filterPanel[props.alt]};
 `;
 
 const FilterDiv = styled.div`
